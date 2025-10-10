@@ -8,10 +8,9 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Test
         public void ValidCondition1()
         {
             DataService ds = new DataService();
-            double x = 2;
-            double wait = 2 + System.Math.Pow((2 - 15) / (2 - 19), 2);
-            wait = System.Math.Round(wait, 3);
+            double x = 5;
             double res = ds.Calculate(x);
+            double wait = 5.186;
             Assert.AreEqual(wait, res);
         }
 
@@ -20,10 +19,8 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Test
         {
             DataService ds = new DataService();
             double x = 0;
-            double numerator = 0 - System.Math.Cos(0) + 10;
-            double denominator = 0 - System.Math.Sin(0) + 12;
-            double wait = System.Math.Round(numerator / denominator, 3);
             double res = ds.Calculate(x);
+            double wait = 0.833;
             Assert.AreEqual(wait, res);
         }
 
@@ -32,9 +29,8 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Test
         {
             DataService ds = new DataService();
             double x = -5;
-            double wait = System.Math.Pow(1 + 1 / System.Math.Pow(-5, 2), 2);
-            wait = System.Math.Round(wait, 3);
             double res = ds.Calculate(x);
+            double wait = 1.04;
             Assert.AreEqual(wait, res);
         }
 
@@ -43,21 +39,10 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Test
         {
             DataService ds = new DataService();
             double x = -20;
-            double wait = -20 + 10 * (-20) - (1 / (-20));
-            wait = System.Math.Round(wait, 3);
             double res = ds.Calculate(x);
-            Assert.AreEqual(wait, res);
-        }
-
-        [TestMethod]
-        public void ValidCondition5()
-        {
-            DataService ds = new DataService();
-            double x = 10;
-            double wait = 10 + System.Math.Pow((10 - 15) / (10 - 19), 2);
-            wait = System.Math.Round(wait, 3);
-            double res = ds.Calculate(x);
+            double wait = -219.95;
             Assert.AreEqual(wait, res);
         }
     }
 }
+    

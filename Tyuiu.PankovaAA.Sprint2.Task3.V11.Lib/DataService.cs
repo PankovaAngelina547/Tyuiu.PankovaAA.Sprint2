@@ -8,20 +8,27 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Lib
             double y = 0;
             if (x > 0)
             {
-                y = x + Math.Pow((x - 15) / (x - 19), 2);
+                // x + ((x - 15)/(x - 19))^x
+                double fraction = (x - 15) / (x - 19);
+                y = x + Math.Pow(fraction, x);
             }
             else if (x == 0)
             {
-                double numerator = Math.Pow(x, 2) - Math.Cos(Math.Pow(x, 2)) + 10;
-                double denominator = Math.Pow(x, 2) - Math.Sin(Math.Pow(x, 2)) + 12;
+                // (x² - cos(x²) + 10) / (x² - sin(x²) + 12)
+                double xSquared = x * x;
+                double numerator = xSquared - Math.Cos(xSquared) + 10;
+                double denominator = xSquared - Math.Sin(xSquared) + 12;
                 y = numerator / denominator;
             }
             else if (x > -15 && x < 0)
             {
-                y = Math.Pow(1 + 1 / Math.Pow(x, 2), 2);
+                // (1 + 1/x²)^2
+                double innerExpression = 1 + 1 / (x * x);
+                y = Math.Pow(innerExpression, 2);
             }
             else if (x < -15)
             {
+                // x + 10x - (1/x)
                 y = x + 10 * x - (1 / x);
             }
 
@@ -29,7 +36,6 @@ namespace Tyuiu.PankovaAA.Sprint2.Task3.V11.Lib
         }
     }
 }
-        
-    
-    
+
+
 
