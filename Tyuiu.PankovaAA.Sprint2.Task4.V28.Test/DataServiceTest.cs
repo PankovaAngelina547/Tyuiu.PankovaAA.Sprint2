@@ -10,10 +10,10 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
         {
             DataService ds = new DataService();
             double x = 2;
-            double y = 7;
+            double y = 10;
             double res = ds.Calculate(x, y);
-            double wait = 25;
-            Assert.AreEqual(wait, res);
+            double wait = 16;
+            Assert.AreEqual(wait, res, 0.001);
         }
 
         [TestMethod]
@@ -22,9 +22,9 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
             DataService ds = new DataService();
             double x = 15;
             double y = 10;
-            double res = ds.Calculate(x, y);
-            double wait = 0.107;
-            Assert.AreEqual(wait, res);
+            double result = ds.Calculate(x, y);
+            double expected = 4.249;
+            Assert.AreEqual(expected, result, 0.001);
         }
     }
 }

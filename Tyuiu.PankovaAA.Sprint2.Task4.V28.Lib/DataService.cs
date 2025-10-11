@@ -5,14 +5,12 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Lib
     {
         public double Calculate(double x, double y)
         {
-            double z = 1.0;
+            double z = (x < y * 2 - 10)
+               ? Math.Pow(1 + (y + 2) / Math.Pow(x, 2), x)
+               : (2 * Math.Pow(x, 2) - Math.Pow(Math.Cos(y), 2) + 12) /
+                 (Math.Pow(y, 2) - Math.Pow(Math.Sin(x), 2) + 9);
 
-            double result = (x < y * 2 - 10)
-                ? Math.Pow(1 + (y + z) / x, x)
-                : (Math.Pow(z, 2) - Math.Pow(1 / Math.Cos(y), 2) + 12) /
-                  (Math.Pow(y, 2) - Math.Pow(Math.Sin(x), 2) + 9);
-
-            return Math.Round(result, 3);
+            return Math.Round(z, 3);
         }
     }
 }
