@@ -5,25 +5,25 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
     public sealed class DataServiceTest
     {
         [TestMethod]
-        public void ValidConditionFirstBranch()
+        public void CheckCalculateFirstCondition()
         {
             DataService ds = new DataService();
-            double x = 3;
-            double y = 5;
-            double result = ds.Calculate(x, y);
-            double expected = 8.0;
-            Assert.AreEqual(expected, result, 0.001);
+            double x = 2;
+            double y = 10;
+            double res = ds.Calculate(x, y);
+            double wait = 16;
+            Assert.AreEqual(wait, res);
         }
 
         [TestMethod]
-        public void ValidConditionSecondBranch()
+        public void CheckCalculateSecondCondition()
         {
             DataService ds = new DataService();
             double x = 15;
             double y = 5;
-            double result = ds.Calculate(x, y);
-            double expected = 450.133;
-            Assert.AreEqual(expected, result, 0.001);
+            double res = ds.Calculate(x, y);
+            double wait = 450.133;
+            Assert.AreEqual(wait, res);
         }
     }
 }
