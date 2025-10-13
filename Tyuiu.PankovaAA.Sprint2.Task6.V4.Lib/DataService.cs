@@ -8,7 +8,7 @@ namespace Tyuiu.PankovaAA.Sprint2.Task6.V4.Lib
             switch (value)
             {
                 case 1: return "Пики";
-                case 2: return "Трефы";
+                case 2: return "трефы";
                 case 3: return "Бубны";
                 case 4: return "Червы";
                 default: throw new ArgumentException($"Масть должна быть от одного до 4. Значение {value} ");
