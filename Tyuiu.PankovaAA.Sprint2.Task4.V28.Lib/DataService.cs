@@ -7,7 +7,7 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Lib
         {
             return (x < y * 2 - 10)
        ? Math.Round(Math.Pow(1 + (y - 2) / (x * x), x), 3)
-       : Math.Round((2 * x * x - Math.Pow(Math.Cos(y), 2) + 12) / (y * y - Math.Pow(Math.Sin(x), 2) + 9), 3);
+       : Math.Round((2 * x * x - Math.Cos(y * y) + 12) / (y * y - Math.Sin(x) + 8.19), 3);
         }
     }
 }

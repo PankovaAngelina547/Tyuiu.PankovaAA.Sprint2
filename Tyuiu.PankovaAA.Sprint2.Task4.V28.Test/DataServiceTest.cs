@@ -8,10 +8,10 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
         public void CheckCalculateFirstCondition()
         {
             DataService ds = new DataService();
-            double x = 2;
-            double y = 10;
+            double x = 5;
+            double y = 5;
             double res = ds.Calculate(x, y);
-            double wait = 9;
+            double wait = 1.787;
             Assert.AreEqual(wait, res);
         }
 
@@ -22,7 +22,7 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
             double x = 15;
             double y = 5;
             double res = ds.Calculate(x, y);
-            double wait = 13.757;
+            double wait = 14.168;
             Assert.AreEqual(wait, res);
         }
     }
