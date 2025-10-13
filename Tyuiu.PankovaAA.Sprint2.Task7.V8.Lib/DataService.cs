@@ -5,19 +5,28 @@ namespace Tyuiu.PankovaAA.Sprint2.Task7.V8.Lib
     {
         public bool CheckDotInShadedArea(double x, double y)
         {
-            bool res;
-            if (x >= -2 && x <= 3 && y >= x && y <= 4)
+            if(x >= -2 && x <= 3)
             {
-                res = true;
+                if (y >= 1 && y <= 4)
+                {
+                    return true;
+                }
+
+                if (x <= 1 && y >= x && y <= 1)
+                {
+                    return true;
+                }
             }
-            else
-            {
-                res = false;
-            }
-            return res;
 
-
-
+            return false;
         }
     }
 }
+
+
+
+
+
+
+
+
