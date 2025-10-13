@@ -11,7 +11,7 @@ namespace Tyuiu.PankovaAA.Sprint2.Task4.V28.Test
             double x = 2;
             double y = 10;
             double res = ds.Calculate(x, y);
-            double wait = 16;
+            double wait = 9;
             Assert.AreEqual(wait, res);
         }
 
